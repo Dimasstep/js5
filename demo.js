@@ -44,7 +44,7 @@ console.log(greeting.charAt(0));// метод
 
 
 console.log(greeting[10]); //undefined
-console.log(greeting.charAt(10));
+console.log(greeting.charAt(10)); //""
 
 for (let char of greeting) {
     console.log(char);
@@ -52,3 +52,36 @@ for (let char of greeting) {
 
 greeting[1] = 'a'; // не работает
 console.log(greeting);
+
+//Метод
+
+console.log(greeting.toUpperCase());
+console.log(greeting.toLocaleLowerCase());
+console.log(greeting[0].toUpperCase());
+
+
+darthVader = "Luke, I am our father";
+console.log(darthVader.indexOf("Luke"));
+console.log(darthVader.indexOf("muther"));
+console.log(darthVader.indexOf("a"));
+console.log(darthVader.indexOf("a", 9));
+
+console.log("Работает цыкл: ");
+let pos = -1;
+while ((pos = darthVader.indexOf("a", pos +1)) != -1) {
+    console.log(pos);
+}
+
+console.log(darthVader.indexOf("u"));
+console.log(darthVader.lastIndexOf("u"));
+
+console.log(darthVader.includes("a"));
+console.log(darthVader.includes("a", 9));
+
+console.log(darthVader.startsWith("Luke"));
+console.log(darthVader.endsWith("father"));
+
+console.log(darthVader.slice(11));
+console.log(darthVader.slice(6, 10));
+console.log(darthVader.slice(-6));
+
