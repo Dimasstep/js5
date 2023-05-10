@@ -65,8 +65,9 @@ console.log(darthVader.indexOf("Luke"));
 console.log(darthVader.indexOf("muther"));
 console.log(darthVader.indexOf("a"));
 console.log(darthVader.indexOf("a", 9));
-
 console.log("Работает цыкл: ");
+
+
 let pos = -1;
 while ((pos = darthVader.indexOf("a", pos +1)) != -1) {
     console.log(pos);
@@ -85,3 +86,72 @@ console.log(darthVader.slice(11));
 console.log(darthVader.slice(6, 10));
 console.log(darthVader.slice(-6));
 
+console.log(darthVader.substring(11));
+console.log(darthVader.substring(11, 6)); //start i and 
+
+console.log(darthVader.substr(11)); 
+console.log(darthVader.substr(11, 4)); //start i length
+
+console.log(darthVader.codePointAt(0));
+console.log(String.fromCodePoint(76));
+
+console.log('Qsterreich'.localeCompare('Zealand')); //-1
+console.log('Zealand'.localeCompare('Zealand'));//0
+console.log('Zealand'.localeCompare('Qsterreich'));//1
+
+
+//Обьявления массива
+
+
+let  arr1 = new Array();
+let arr2 = [];
+
+let users = ["Dimas", "Anna", "Andrew"];//0, 1,2
+console.log(users);
+console.log(users[0]);
+users[1] = "Thomas";
+console.log(users);
+
+users[3] = "Andy"; // 0,1,2,3
+console.log(users);
+
+console.log(users.length);//Длинна массива
+users[4] = 5;
+console.log(users);
+
+//очередь и стек
+
+
+users.pop();//удаляем последний элемент
+console.log(users);
+users.push("Richard"); // добавляем элемент в конец
+console.log(users);
+
+users.shift(); //удаляет первый элемент
+console.log(users);
+
+users.unshift("Elsa"); // давляем элемент в начало строки
+console.log(users);
+
+//Работа  с цыклами
+
+for (let i = 0; i < users.length; i++) {
+    console.log(users[i]);
+}
+
+for (let user of users) {
+    console.log(user);
+} // идем по всему массиву
+
+
+
+// удаление элементов
+users.length = 0;
+console.log(users);
+
+// многомерные массивы
+let matrix = [
+    [10, 9, 8],
+    [7, 6, 5],
+    [4, 3, 2]
+]
